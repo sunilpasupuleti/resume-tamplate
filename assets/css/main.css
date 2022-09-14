@@ -1,0 +1,267 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500&family=Ubuntu:wght@300;400;500&display=swap");
+
+:root {
+  --body-color: #313b47;
+  --primary: #313c4e;
+  --secondary: #449399;
+  --primary-dark: #222a33;
+  --chips: #989da6;
+  --white: #fff;
+  --black: #000108;
+
+  /* fonts  */
+  --poppins-font: "Poppins", sans-serif;
+  --ubuntu-font: "Ubuntu", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0%;
+  margin: 0%;
+}
+
+html {
+  scroll-behavior: smooth;
+  /* background: var(--body-color); */
+}
+
+body {
+  font-family: var(--ubuntu-font);
+  background-color: #fff;
+  min-height: 100vh;
+  /* margin: 15rem; */
+  /* margin-top: 7rem; */
+  /* text-align: justify; */
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.section {
+  padding: 3rem;
+}
+
+.profile_details {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--primary);
+  color: var(--white);
+  padding-bottom: 1rem;
+}
+.profile_details .picture img {
+  border-radius: 50%;
+  height: 300px;
+  width: 300px;
+  object-fit: cover;
+}
+
+.profile_details .info .title {
+  font-size: 3rem;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+.profile_details .info .sub_title {
+  color: var(--secondary);
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.profile_details .info .description {
+  padding-top: 0.5rem;
+  line-height: 1.3;
+  font-size: 1.2rem;
+  width: 90%;
+}
+
+.personal_details {
+  background-color: var(--primary-dark);
+  display: grid;
+  padding: 1.5rem 3rem 1.5rem 3rem;
+  grid-template-columns: 1fr 1fr;
+  color: white;
+}
+
+.personal_details .left,
+.personal_details .right {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+.personal_details .left .detail,
+.personal_details .right .detail {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.personal_details .left .detail i,
+.personal_details .left .detail a,
+.personal_details .right .detail i,
+.personal_details .right .detail a {
+  font-size: 1.2rem;
+}
+
+.profession_section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.profession_section .left .profession:not(:first-child),
+.profession_section .right .profession:not(:first-child) {
+  margin-top: 4rem;
+}
+
+.profession_section .profession .title {
+  color: var(--secondary);
+  letter-spacing: 2px;
+  text-decoration: underline;
+  text-underline-offset: 15px;
+  text-decoration-thickness: 3px;
+}
+
+.experiences,
+.educations,
+.projects {
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+}
+
+.exp_title {
+  font-weight: 500;
+  margin-bottom: 5px;
+  font-size: 1.7rem;
+}
+.proj_title {
+  font-weight: 400;
+  margin-bottom: 8px;
+  font-size: 1.5rem;
+}
+
+.comp_name {
+  font-weight: 400;
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+}
+
+.proj_link {
+  font-weight: 400;
+  color: var(--secondary);
+  text-decoration: underline;
+  margin-bottom: 5px;
+  font-size: 1.1rem;
+}
+
+.proj_desc_title {
+  color: var(--primary);
+}
+
+.proj_desc {
+  margin-top: 10px;
+}
+
+.time_period,
+.tasks_title,
+.address {
+  color: var(--secondary);
+  font-size: 1rem;
+  font-weight: normal;
+  font-style: italic;
+  margin-bottom: 5px;
+}
+
+.exp_link {
+  color: var(--secondary);
+  font-weight: 500;
+  text-decoration: underline;
+}
+
+.experience:not(:first-child),
+.education:not(:first-child) {
+  margin-top: 50px;
+}
+
+.experience ul {
+  padding-left: 1rem;
+  margin-top: 0.6rem;
+}
+
+.experience li {
+  margin-top: 0.5rem;
+  width: 90%;
+  font-size: 1.1rem;
+  list-style: none;
+  line-height: 1.2;
+}
+.experience li::before,
+.interests li::before {
+  content: "\2022"; /* Add content: \2022 is the CSS Code/unicode for a bullet */
+  color: var(--secondary); /* Change the color */
+  font-weight: bold; /* If you want it to be bold */
+  display: inline-block; /* Needed to add space between the bullet and the text */
+  width: 1em; /* Also needed for space (tweak if needed) */
+  margin-left: -1em; /* Also needed for space (tweak if needed) */
+}
+
+.education {
+  width: 90%;
+}
+
+.education .flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.skills {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.skill {
+  background-color: var(--chips);
+  color: #fff;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.project:not(:first-child) {
+  margin-top: 30px;
+}
+
+.languages {
+  margin-top: 35px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+}
+
+.language {
+  color: var(--primary);
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+
+.interests {
+  margin-top: 35px;
+  margin-left: 1rem;
+}
+
+.interests li {
+  list-style: none;
+  margin-top: 0.7rem;
+}
+
+.interest {
+  font-size: 1.3rem;
+}
