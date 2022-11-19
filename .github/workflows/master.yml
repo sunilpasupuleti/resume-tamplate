@@ -21,4 +21,6 @@ jobs:
           exclude: |
             **/.git*
             **/.git*/**
+            **/.vscode*/**
+            **/.DS_STORE*/**
             **/node_modules/**
